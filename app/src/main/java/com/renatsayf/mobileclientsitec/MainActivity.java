@@ -5,9 +5,12 @@ import androidx.fragment.app.FragmentContainerView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
+import dagger.hilt.android.AndroidEntryPoint;
 
 import android.os.Bundle;
 
+
+@AndroidEntryPoint
 public class MainActivity extends AppCompatActivity
 {
 

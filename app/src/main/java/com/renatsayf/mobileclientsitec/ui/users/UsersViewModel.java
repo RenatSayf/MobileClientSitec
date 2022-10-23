@@ -1,8 +1,15 @@
 package com.renatsayf.mobileclientsitec.ui.users;
 
-import androidx.lifecycle.ViewModel;
+import javax.inject.Inject;
 
+import androidx.lifecycle.ViewModel;
+import dagger.hilt.android.lifecycle.HiltViewModel;
+
+@HiltViewModel
 public class UsersViewModel extends ViewModel
 {
-    // TODO: Implement the ViewModel
+    @Inject
+    public UsersViewModel() {
+
+    }
 }

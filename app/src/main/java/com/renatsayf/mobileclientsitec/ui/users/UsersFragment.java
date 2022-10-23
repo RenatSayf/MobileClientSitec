@@ -20,7 +20,9 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import dagger.hilt.android.AndroidEntryPoint;
 
+@AndroidEntryPoint
 public class UsersFragment extends Fragment
 {
     private FragmentUsersBinding binding;

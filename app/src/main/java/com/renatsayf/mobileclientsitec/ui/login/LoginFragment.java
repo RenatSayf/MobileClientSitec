@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import dagger.hilt.android.AndroidEntryPoint;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.view.ViewGroup;
 import com.renatsayf.mobileclientsitec.R;
 import com.renatsayf.mobileclientsitec.databinding.FragmentLoginBinding;
 
+
+@AndroidEntryPoint
 public class LoginFragment extends Fragment
 {
     private FragmentLoginBinding binding;
