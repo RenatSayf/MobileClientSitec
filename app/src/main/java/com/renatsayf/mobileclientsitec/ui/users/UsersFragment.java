@@ -48,6 +48,10 @@ public class UsersFragment extends Fragment
         if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             requestPermissionLauncher.launch(Manifest.permission.READ_PHONE_STATE);
         }
+        else {
+            deviceId = telephonyManager.getDeviceId();
+            mViewModel.getUsers(deviceId);
+        }
 
 
     }
@@ -60,6 +64,7 @@ public class UsersFragment extends Fragment
                     if (result) {
                         Toast.makeText(requireContext(), "Permission granted.", Toast.LENGTH_SHORT).show();
                         deviceId = telephonyManager.getDeviceId();
+                        mViewModel.getUsers(deviceId);
                         return;
                     } else {
                         Toast.makeText(requireContext(), "Permission denied.", Toast.LENGTH_SHORT).show();
