@@ -6,22 +6,18 @@
     app:startDestination="@id/usersFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.renatsayf.mobileclientsitec.ui.login.LoginFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_usersFragment"
-            app:destination="@id/usersFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/usersFragment"
         android:name="com.renatsayf.mobileclientsitec.ui.users.UsersFragment"
         android:label="fragment_users"
         tools:layout="@layout/fragment_users" >
         <action
-            android:id="@+id/action_usersFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_usersFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.renatsayf.mobileclientsitec.ui.users.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
 
 </navigation>

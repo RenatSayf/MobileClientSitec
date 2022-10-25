@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MobileClientSitec</string>
+    <string name="text_password">Пароль</string>
+    <string name="text_enter">Вход</string>
+    <string name="text_list">Список</string>
+    <string name="text_user">Пользователь:</string>
+    <string name="text_admin">Администратор:</string>
+    <string name="text_id">ID:</string>
+    <string name="text_language">Язык:</string>
+    <string name="text_start_screen">Выбор пользователя</string>
+    <string name="text_result_screen">Список пользователей</string>
 </resources>
