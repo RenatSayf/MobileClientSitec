@@ -10,6 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.Response;
 
 
 @SuppressWarnings({"CodeBlock2Expr", "Convert2MethodRef"})
@@ -23,7 +24,7 @@ public class NetRepository
         this.api = api;
     }
 
-    public Single<AuthCode> auth(
+    public Single<Response<AuthCode>> auth(
             String imei,
             String uid,
             String pass,
@@ -43,7 +44,7 @@ public class NetRepository
         });
     }
 
-    public Single<Users> getUsers(String imei) {
+    public Single<Response<Users>> getUsers(String imei) {
         return Single.create( emitter -> {
             Disposable subscribe = api.getUsers(imei)
                     .subscribeOn(Schedulers.io())

@@ -4,17 +4,17 @@ import com.renatsayf.mobileclientsitec.model.auth.AuthCode;
 import com.renatsayf.mobileclientsitec.model.users.Users;
 
 import io.reactivex.Single;
+import retrofit2.Response;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface IApi
 {
-    @GET("/{imei}/authentication")
     @Headers(value = "authorization: Basic aHR0cDpodHRw")
-    Single<AuthCode> auth(
+    @GET("UKA_TRADE/hs/MobileClient/{imei}/authentication")
+    Single<Response<AuthCode>> auth(
             @Path(value = "imei", encoded = true)
             String imei,
             @Query(value = "uid", encoded = true)
@@ -27,9 +27,9 @@ public interface IApi
             String nfc
     );
 
-    @GET("/{imei}/form/users")
     @Headers(value = "authorization: Basic aHR0cDpodHRw")
-    Single<Users> getUsers(
+    @GET("UKA_TRADE/hs/MobileClient/{imei}/form/users")
+    Single<Response<Users>> getUsers(
             @Path(value = "imei", encoded = true) String imei
     );
 }

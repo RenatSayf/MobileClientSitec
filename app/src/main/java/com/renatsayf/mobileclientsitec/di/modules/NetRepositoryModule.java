@@ -16,15 +16,8 @@ import dagger.hilt.components.SingletonComponent;
 @Module
 public class NetRepositoryModule
 {
-    //private IApi api;
-
     @Inject
     public NetRepositoryModule(){}
-
-//    @Inject
-//    public NetRepositoryModule(IApi api) {
-//        this.api = api;
-//    }
 
     @Provides
     @Singleton
